@@ -1,78 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="A simple HTML document with basic structure">
+    <meta name="description" content="Tienda web de Mobile CHESS - Celulares y accesorios">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Styles/style.css">
-    <title>Mobile CHESS</title>
+    <title>CHESS Mobile</title>
 </head>
+
 <body>
 
-   <header>
+    <header>
         <div class="logo">
             <img src="" alt="">
-            <h2>Mobile Chess</h2>
+            <h2 translate="no">CHESS Mobile</h2>
         </div>
         <nav>
             <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#about">Sobre nosotros</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
             </ul>
         </nav>
-   </header>
+    </header>
 
-   <main>
-    <div class="text_main">
-        <h1>Mobile CHESS</h1>
-        <p>Celulares y accesorios</p>
+    <main id="inicio">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="video/tu-video.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="overlay"></div>
+        <div class="text_main">
+            <h1 translate="no">CHESS Mobile</h1>
+            <p>Celulares y accesorios</p>
+            <div class="btn_access_main">
+                <a href="tienda.html">Tienda</a>
+                <a href="tienda.html">Ofertas</a>
+            </div>
+        </div>
+    </main>
 
-        <div class="btn_access_main">
-            <a href="">Tienda</a>
-            <a href="">Ofertas</a>
-        </div> 
-    </div>
-   </main>
+    <article>
+        <div class="values">
+            <div class="value">
+                <div class="icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="info">
+                    <h3>Atención Personalizada</h3>
+                    <p>Asesoría única para cada cliente.</p>
+                </div>
+            </div>
+            <div class="value">
+                <div class="icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="info">
+                    <h3>Tecnología Moderna</h3>
+                    <p>Últimos modelos y accesorios.</p>
+                </div>
+            </div>
+            <div class="value">
+                <div class="icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <div class="info">
+                    <h3>Precios Accesibles</h3>
+                    <p>Productos y ofertas competitivas.</p>
+                </div>
+            </div>
+            <div class="value">
+                <div class="icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="info">
+                    <h3>Confianza y Seguridad</h3>
+                    <p>Compra protegida y garantizada.</p>
+                </div>
+            </div>
+        </div>
+    </article>
 
-   <article>
-    <div class="values">
-        <div class="value">
-            <i></i>
-            <h3></h3>
-            <p></p>
-        </div>
-        <div class="value">
-            <i></i>
-            <h3></h3>
-            <p></p>
-        </div>
-        <div class="value">
-            <i></i>
-            <h3></h3>
-            <p></p>
-        </div>
-        <div class="value">
-            <i></i>
-            <h3></h3>
-            <p></p>
-        </div>
-    </div>
-   </article>
-
-   <section>
+    <section id="about">
         <div class="card_about">
             <h1>Misión</h1>
-            <p>En Chess Mobile, nuestra misión es conectar a las personas con la tecnología más avanzada,  ofreciendo una amplia gama de smartphones y accesorios de última generación a precios  accesibles.
-             Nos destacamos por nuestro asesoramiento personalizado y nuestro compromiso  con la satisfacción del cliente.</p>
+            <p>En Chess Mobile, nuestra misión es conectar a las personas con la tecnología más avanzada, ofreciendo una
+                amplia gama de smartphones y accesorios de última generación a precios accesibles.
+                Nos destacamos por nuestro asesoramiento personalizado y nuestro compromiso con la satisfacción del
+                cliente.</p>
         </div>
 
-        <div class="card_about">
-            <h1>Visión</h1>
-            <p>Aspiramos a ser la tienda de referencia en managua, ofreciendo una experiencia de compra  única y memorable. Queremos ser reconocidos por nuestra amplia variedad de productos, 
-            nuestro servicio técnico de excelencia y nuestra capacidad para anticiparnos a las necesidades de nuestros clientes.</p>
+        <div class="card_about" style="background: #0053A1; color: white;">
+            <h1 style="color: white;">Visión</h1>
+            <p style="color: white;">Aspiramos a ser la tienda de referencia en managua, ofreciendo una experiencia de
+                compra única y
+                memorable. Queremos ser reconocidos por nuestra amplia variedad de productos,
+                nuestro servicio técnico de excelencia y nuestra capacidad para anticiparnos a las necesidades de
+                nuestros clientes.</p>
         </div>
 
         <div class="card_about">
@@ -80,43 +108,187 @@
             <p>
                 Compromiso con el cliente <br>
                 Innovación <br>
-                Honestidad <br> 
-                Responsabilidad <br> 
+                Honestidad <br>
+                Responsabilidad <br>
                 Calidad <br>
                 Trabajo en equipo.
             </p>
         </div>
-   </section>
+    </section>
+
+    <section id="Store">
+
+        <h1>Tienda</h1>
+
+        <div class="store-container">
 
 
-   <section id="tienda">
-    <h2>Tienda</h2>
-    <!-- Aquí va tu filtro y productos -->
+            <div class="store-quick">
+                <nav>
+                    <ul>
+                        <li data-category="celular" class="filter-btn">Celular</li>
+                        <li data-category="Accesorio" class="filter-btn">Accesorio</li>
+                        <li data-category="computadora" class="filter-btn">Computadora</li>
+                         <li data-category="Moto" class="filter-btn">Moto</li>
+                        <li data-category="Camioneta" class="filter-btn">Camioneta</li>
+                        <li data-category="Plancha" class="filter-btn">Plancha</li>
+                        <li data-category="all" class="filter-btn">Todos</li>
+                    </ul>
+                </nav>
+            </div>
 
-    <div class="mapa-tienda" style="margin: 30px 0; text-align: center;">
-        <h3>¿Dónde estamos?</h3>
-        <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.857759740072!2d-86.251388!3d12.136389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA4JzExLjAiTiA4NsKwMTUnMDUuMCJX!5e0!3m2!1ses!2sni!4v1719345678901!5m2!1ses!2sni" 
-        width="100%" 
-        height="350" 
-        style="border:0; border-radius:12px;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    <br>
-    <a href="https://maps.app.goo.gl/kNmbQhzWsbZUnLcf9" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 24px;background:#0053A1;color:#fff;border-radius:20px;text-decoration:none;font-weight:500;">
-        Cómo llegar
-    </a>
-    </div>
-</section>
+            <div class="store-item">
 
-   
+                <div class="input-store">
+                    <input type="text" placeholder="Buscar productos..." id="search-input" autocomplete="off">
+
+                    <div id="suggestions" class="suggestions-list"></div>
+                </div>
+
+                <div class="items-store">
+                    <div class="item" data-category="celular">
+                        <img src="Images/phone1.jpg" alt="Celular Modelo A">
+                        <h3>Celular Modelo A</h3>
+                        <p>Precio: $299.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Accesorio">
+                        <img src="Images/phone2.jpg" alt="Accesorio Modelo B">
+                        <h3>Celular Modelo B</h3>
+                        <p>Precio: $399.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="computadora">
+                        <img src="Images/phone3.jpg" alt="Computadora Modelo C">
+                        <h3>Computadora Modelo C</h3>
+                        <p>Precio: $499.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Moto">
+                        <img src="Images/phone1.jpg" alt="Moto">
+                        <h3>Celular Modelo A</h3>
+                        <p>Precio: $299.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Camioneta">
+                        <img src="Images/phone2.jpg" alt="Camioneta ">
+                        <h3>Celular Modelo B</h3>
+                        <p>Precio: $399.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Plancha">
+                        <img src="Images/phone3.jpg" alt="Plancha">
+                        <h3>Computadora Modelo C</h3>
+                        <p>Precio: $499.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Moto">
+                        <img src="Images/phone1.jpg" alt="Moto">
+                        <h3>Celular Modelo A</h3>
+                        <p>Precio: $299.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Camioneta">
+                        <img src="Images/phone2.jpg" alt="Camioneta ">
+                        <h3>Celular Modelo B</h3>
+                        <p>Precio: $399.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Plancha">
+                        <img src="Images/phone3.jpg" alt="Plancha">
+                        <h3>Computadora Modelo C</h3>
+                        <p>Precio: $499.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Moto">
+                        <img src="Images/phone1.jpg" alt="Moto">
+                        <h3>Celular Modelo A</h3>
+                        <p>Precio: $299.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Camioneta">
+                        <img src="Images/phone2.jpg" alt="Camioneta ">
+                        <h3>Celular Modelo B</h3>
+                        <p>Precio: $399.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                    <div class="item" data-category="Plancha">
+                        <img src="Images/phone3.jpg" alt="Plancha">
+                        <h3>Computadora Modelo C</h3>
+                        <p>Precio: $499.99</p>
+                        <button class="btn-buy">Comprar</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
 
 
+    </section>
 
+
+    <section id="Map">
+        <div class="mapa-tienda" style="margin: 30px 0; text-align: center;">
+            <h3>¿Dónde estamos?</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.857759740072!2d-86.251388!3d12.136389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA4JzExLjAiTiA4NsKwMTUnMDUuMCJX!5e0!3m2!1ses!2sni!4v1719345678901!5m2!1ses!2sni"
+                width="100%" height="350" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <br>
+            <a href="https://maps.app.goo.gl/kNmbQhzWsbZUnLcf9" target="_blank"
+                style="display:inline-block;margin-top:12px;padding:10px 24px;background:#0053A1;color:#fff;border-radius:20px;text-decoration:none;font-weight:500;">
+                Cómo llegar
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content"
+            style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding: 24px 0;">
+
+            <div class="footer-section horario">
+                <h4>Horario de atención</h4>
+                <nav>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li>Lunes a Viernes: 9:00 am - 6:00 pm</li>
+                        <li>Sábados: 9:00 am - 2:00 pm</li>
+                        <li>Domingo: Cerrado</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section enlaces-rapidos">
+                <h4>Enlaces rápidos</h4>
+                <nav>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#about">Sobre nosotros</a></li>
+                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section redes-sociales">
+                <h4>Síguenos</h4>
+                <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok"
+                    style="margin-right: 10px; color: #000;"><i class="fab fa-tiktok fa-lg"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"
+                    style="margin-right: 10px; color: #000;"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" style="color: #000;"><i
+                        class="fab fa-facebook fa-lg"></i></a>
+            </div>
+        </div>
+
+        <div style="text-align:center; font-size: 0.95em; color: black; margin-top: 16px;">
+            &copy; 2024 Mobile Chess. Todos los derechos reservados.
+        </div>
+    </footer>
 
 
     <script src="Js/main.js"></script>
 </body>
+
 </html>
