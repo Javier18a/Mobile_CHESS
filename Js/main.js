@@ -1,3 +1,24 @@
+// Smooth scroll para enlaces internos
+document.querySelectorAll('nav ul li a[href^="#"], nav ul li a:not([href^="http"])').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+});
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
+        this.classList.add('active-filter');
+    });
+});
+
 // Filtro por categoría
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function() {
@@ -75,3 +96,49 @@ document.addEventListener('click', function(e) {
         suggestions.classList.remove('active');
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Modal de información de producto
+    const modal = document.getElementById('product-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalCapacidad = document.getElementById('modal-capacidad');
+    const modalRam = document.getElementById('modal-ram');
+    const modalPantalla = document.getElementById('modal-pantalla');
+    const modalPrecio = document.getElementById('modal-precio');
+    const closeModal = document.querySelector('.close-modal');
+
+    // Mostrar información del producto en el modal
+    document.querySelectorAll('.btn-item').forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Obtener los datos del producto desde los atributos data-*
+            document.getElementById('modal-title').textContent = this.getAttribute('data-title');
+            document.getElementById('modal-img').src = this.getAttribute('data-img');
+            document.getElementById('modal-capacidad').textContent = this.getAttribute('data-capacidad');
+            document.getElementById('modal-ram').textContent = this.getAttribute('data-ram');
+            document.getElementById('modal-pantalla').textContent = this.getAttribute('data-pantalla');
+            document.getElementById('modal-precio').textContent = this.getAttribute('data-precio');
+
+            // Mostrar el modal
+            document.getElementById('product-modal').style.display = 'flex';
+        });
+    });
+
+    // Cerrar el modal al hacer clic en la X o fuera del contenido
+    document.querySelectorAll('.close-modal').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.getElementById('product-modal').style.display = 'none';
+        });
+    });
+    document.getElementById('product-modal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+        }
+    });
+});
+
+
+
+
+
