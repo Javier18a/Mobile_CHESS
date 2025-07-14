@@ -33,9 +33,16 @@ header {
     align-items: center;
 }
 
+.logo a{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+
 .logo img{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;  
     margin-right: 15px;
 }
@@ -43,6 +50,10 @@ header {
 a{
     text-decoration: none;
     color: inherit; /* Hereda el color del elemento padre */
+}
+
+.main-nav .hamburger {
+    display: none;
 }
 
 header nav {
@@ -85,11 +96,7 @@ header nav>ul>li>a:hover {
     /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); */
 }
 
-main, #inicio {
-    padding-top: 70px; /* Ajusta según la altura de tu header */
-}
-
-#inicio {
+main{
     position: relative;
     min-height: 100vh; /* Cambiado de 400px a 100vh */
     height: 100vh;     /* Asegura que ocupe toda la altura de la ventana */
@@ -97,30 +104,14 @@ main, #inicio {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
+} 
 
-#bg-video {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
 
-#inicio .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100%;
-    background: rgba(0,0,0,0.45); /* Ajusta la opacidad aquí */
-    z-index: 2;
-}
 
 #inicio .text_main {
     position: relative;
     z-index: 3;
-    color: #fff;
+    color: black;
     text-align: center;
     width: 100%;
 }
@@ -276,6 +267,8 @@ main, #inicio {
     border-radius: 6px;
     text-decoration: none;
     border: none;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -475,13 +468,9 @@ footer {
 .footer-section a {
     color: #fff;
     margin-right: 14px;
-    font-size: 1.4rem;
+    font-size: 14px;
     transition: color 0.2s;
     text-decoration: none;
-}
-
-.footer-section a:hover {
-    color: #2a9d8f;
 }
 
 .footer-contacto p {
@@ -496,6 +485,73 @@ footer > div:last-child {
     font-size: 0.95em;
     color: #e0e0e0;
     margin-top: 16px;
+}
+
+.enlaces-rapidos{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.enlaces-rapidos li {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.footer-section.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-section.redes-sociales a[aria-label="TikTok"] i {
+    color: #010101; /* TikTok: negro */
+    background: linear-gradient(135deg, #25F4EE 0%, #FE2C55 100%);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    padding: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.footer-section.redes-sociales a[aria-label="Instagram"] i {
+    color: #fff;
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    padding: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.footer-section.redes-sociales a[aria-label="Facebook"] i {
+    color: #fff;
+    background: #1877f3;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    padding: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.footer-section.redes-sociales a:hover i {
+    transform: scale(1.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 /* Responsive footer */

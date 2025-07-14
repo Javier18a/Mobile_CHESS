@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/Logo ChessM.png" type="image/png" sizes="16x16">
     <meta name="description" content="Tienda web de Mobile CHESS - Celulares y accesorios">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/mediaQuery.css">
     <title>CHESS Mobile</title>
 </head>
 
@@ -15,25 +17,27 @@
 
     <header>
         <div class="logo">
-            <img src="" alt="">
+            <a href="#"> 
+                <img src="./img/Logo ChessM.png" alt="">
             <h2 translate="no">CHESS Mobile</h2>
+            </a>
         </div>
-        <nav>
-            <ul>
+        <nav class="main-nav">
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#About">Sobre nosotros</a></li>
                 <li><a href="#Store">Tienda</a></li>
-                <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="#Map">Ubicación</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="inicio">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="video/tu-video.mp4" type="video/mp4">
-            Tu navegador no soporta videos HTML5.
-        </video>
-        <div class="overlay"></div>
         <div class="text_main">
             <h1 translate="no">CHESS Mobile</h1>
             <p>Celulares y accesorios</p>
@@ -129,7 +133,7 @@
                         <li data-category="IPhone" class="filter-btn">IPhone</li>
                         <li data-category="Samsung" class="filter-btn">Samsung</li>
                         <li data-category="Accesorios" class="filter-btn">Accesorios</li>
-                        <li data-category="TV" class="filter-btn">TV</li> 
+                        <li data-category="TV" class="filter-btn">TV</li>
                     </ul>
                 </nav>
             </div>
@@ -147,56 +151,48 @@
                     <!-- IPhones 11 -->
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 11 64GB .jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 11 64GB .jpg" alt="IPhone 11">
                         <h3>IPhone 11</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 11 64GB .jpg"
+                        <button class="btn-item" data-title="IPhone 11" data-img="./img/IPhone 11 64GB .jpg"
                             data-capacidad="64 GB" data-ram="4 GB" data-pantalla="6.1''" data-precio="250$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 11 128GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 11 128GB.jpg" alt="IPhone 11">
                         <h3>IPhone 11</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 11 128GB.jpg"
+                        <button class="btn-item" data-title="IPhone 11" data-img="./img/IPhone 11 128GB.jpg"
                             data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="270$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 11 Pro 64GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 11 Pro 64GB.jpg" alt="IPhone 11">
                         <h3>IPhone 11 Pro</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 11 Pro 64GB.jpg"
+                        <button class="btn-item" data-title="IPhone 11 Pro" data-img="./img/IPhone 11 Pro 64GB.jpg"
                             data-capacidad="64 GB" data-ram="8 GB" data-pantalla="9''" data-precio="290$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 11 Pro Max 64GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 11 Pro Max 64GB.jpg" alt="IPhone 11">
                         <h3>IPhone 11 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 11 Pro Max 64GB.jpg"
-                            data-capacidad="64 GB" data-ram="8 GB" data-pantalla="9''" data-precio="320$">
+                        <button class="btn-item" data-title="IPhone 11 Pro Max"
+                            data-img="./img/IPhone 11 Pro Max 64GB.jpg" data-capacidad="64 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="320$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 11 Pro Max 256GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 11 Pro Max 256GB.jpg" alt="IPhone 11">
                         <h3>IPhone 11 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 11 Pro Max 256GB.jpg"
-                            data-capacidad="265 GB" data-ram="8 GB" data-pantalla="9''" data-precio="350$">
+                        <button class="btn-item" data-title="IPhone 11 Pro Max"
+                            data-img="./img/IPhone 11 Pro Max 256GB.jpg" data-capacidad="265 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="350$">
                             Ver información
                         </button>
                     </div>
@@ -204,57 +200,38 @@
                     <!-- IPhones 12 -->
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 12 64GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 12 64GB.jpg" alt="IPhone 11">
                         <h3>IPhone 12</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 12 64GB.jpg"
-                            data-capacidad="64 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="270$">
+                        <button class="btn-item" data-title="IPhone 12" data-img="./img/IPhone 12 64GB.jpg"
+                            data-capacidad="64 GB" data-ram="8 GB" data-pantalla="9''" data-precio="270$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 12 128GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 12 128GB.jpg" alt="IPhone 11">
                         <h3>IPhone 12</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 12 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="315$">
+                        <button class="btn-item" data-title="IPhone 12" data-img="./img/IPhone 12 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="315$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 12 Pro 512GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 12 Pro 512GB.jpg" alt="IPhone 11">
                         <h3>IPhone 12 Pro</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 12 Pro 512GB.jpg"
-                            data-capacidad="512 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="350$">
+                        <button class="btn-item" data-title="IPhone 12 Pro" data-img="./img/IPhone 12 Pro 512GB.jpg"
+                            data-capacidad="512 GB" data-ram="8 GB" data-pantalla="9''" data-precio="350$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 12 Pro Max 128GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 12 Pro Max 128GB.jpg" alt="IPhone 11">
                         <h3>IPhone 12 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 12 Pro Max 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="434$">
+                        <button class="btn-item" data-title="IPhone 12 Pro Max"
+                            data-img="./img/IPhone 12 Pro Max 128GB.jpg" data-capacidad="128 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="434$">
                             Ver información
                         </button>
                     </div>
@@ -262,57 +239,39 @@
                     <!-- IPhone 13 -->
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 13 128GB.jpg"
-                            alt="IPhone 13">
+                        <img src="./img/IPhone 13 128GB.jpg" alt="IPhone 13">
                         <h3>IPhone 13</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 13 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="379$">
+                        <button class="btn-item" data-title="IPhone 13" data-img="./img/IPhone 13 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="379$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 13 Pro Max 128GB.jpg"
-                            alt="IPhone 13">
+                        <img src="./img/IPhone 13 Pro Max 128GB.jpg" alt="IPhone 13">
                         <h3>IPhone 13 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 13 Pro Max 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="540$">
+                        <button class="btn-item" data-title="IPhone 13 Pro Max"
+                            data-img="./img/IPhone 13 Pro Max 128GB.jpg" data-capacidad="128 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="540$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 13 128GB.jpg"
-                            alt="IPhone 13">
+                        <img src="./img/IPhone 13 128GB.jpg" alt="IPhone 13">
                         <h3>IPhone 13</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 13 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="379$">
+                        <button class="btn-item" data-title="IPhone 13" data-img="./img/IPhone 13 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="379$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 13 Pro Max 128GB.jpg"
-                            alt="IPhone 13">
+                        <img src="./img/IPhone 13 Pro Max 128GB.jpg" alt="IPhone 13">
                         <h3>IPhone 13 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 13 Pro Max 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="540$">
+                        <button class="btn-item" data-title="IPhone 13 Pro Max"
+                            data-img="./img/IPhone 13 Pro Max 128GB.jpg" data-capacidad="128 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="540$">
                             Ver información
                         </button>
                     </div>
@@ -320,177 +279,122 @@
                     <!-- IPhones 14 -->
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 14 128GB.jpg"
-                            alt="IPhone 14">
+                        <img src="./img/IPhone 14 128GB.jpg" alt="IPhone 14">
                         <h3>IPhone 14</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 14 128GB.jpg"
-                            data-capacidad="128 GB"
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="429$">
+                        <button class="btn-item" data-title="IPhone 14" data-img="./img/IPhone 14 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="429$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 14 Plus 128GB.jpg"
-                            alt="IPhone 14">
+                        <img src="./img/IPhone 14 Plus 128GB.jpg" alt="IPhone 14">
                         <h3>IPhone 14 Plus</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 14 Plus 128GB.jpg"
-                            data-capacidad="128 GB"
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="529$">
+                        <button class="btn-item" data-title="IPhone 14 Plus" data-img="./img/IPhone 14 Plus 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="529$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 14 Pro Max 256GB.jpg"
-                            alt="IPhone 14">
+                        <img src="./img/IPhone 14 Pro Max 256GB.jpg" alt="IPhone 14">
                         <h3>IPhone 14 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 14 Pro Max 256GB.jpg"
-                            data-capacidad="256 GB"
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="710$">
+                        <button class="btn-item" data-title="IPhone 14 Pro Max"
+                            data-img="./img/IPhone 14 Pro Max 256GB.jpg" data-capacidad="256 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="710$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 14 128GB.jpg"
-                            alt="IPhone 14">
+                        <img src="./img/IPhone 14 128GB.jpg" alt="IPhone 14">
                         <h3>IPhone 14</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 14 128GB.jpg"
-                            data-capacidad="128 GB"
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="429$">
+                        <button class="btn-item" data-title="IPhone 14" data-img="./img/IPhone 14 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="429$">
                             Ver información
                         </button>
                     </div>
-                    
-                    
+
+
 
                     <!-- IPhones 15 -->
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 15 128GB.jpg"
-                            alt="IPhone 15">
+                        <img src="./img/IPhone 15 128GB.jpg" alt="IPhone 15">
                         <h3>IPhone 15</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 15 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="579$">
+                        <button class="btn-item" data-title="IPhone 15" data-img="./img/IPhone 15 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="579$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 15 Pro Max 256GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 15 Pro Max 256GB.jpg" alt="IPhone 11">
                         <h3>IPhone 15 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 15 Pro Max 256GB.jpg"
-                            data-capacidad="256 GB"
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="878$">
+                        <button class="btn-item" data-title="IPhone 15 Pro Max"
+                            data-img="./img/IPhone 15 Pro Max 256GB.jpg" data-capacidad="256 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="878$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 15 128GB.jpg"
-                            alt="IPhone 15">
+                        <img src="./img/IPhone 15 128GB.jpg" alt="IPhone 15">
                         <h3>IPhone 15</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 15 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="579$">
+                        <button class="btn-item" data-title="IPhone 15" data-img="./img/IPhone 15 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="579$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 15 Pro Max 256GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 15 Pro Max 256GB.jpg" alt="IPhone 11">
                         <h3>IPhone 15 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 15 Pro Max 256GB.jpg"
-                            data-capacidad="256 GB"
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="878$">
+                        <button class="btn-item" data-title="IPhone 15 Pro Max"
+                            data-img="./img/IPhone 15 Pro Max 256GB.jpg" data-capacidad="256 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="878$">
                             Ver información
                         </button>
                     </div>
 
-                    
+
 
                     <!-- IPhones 16 -->
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 16 128GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 16 128GB.jpg" alt="IPhone 11">
                         <h3>IPhone 16</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 16 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="799$">
+                        <button class="btn-item" data-title="IPhone 16" data-img="./img/IPhone 16 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="799$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 16 Pro Max 256GB.jpg"
-                            alt="IPhone 16">
+                        <img src="./img/IPhone 16 Pro Max 256GB.jpg" alt="IPhone 16">
                         <h3>IPhone 16 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 16 Pro Max 256GB.jpg"
-                            data-capacidad="256 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="1170$">
+                        <button class="btn-item" data-title="IPhone 16 Pro Max"
+                            data-img="./img/IPhone 16 Pro Max 256GB.jpg" data-capacidad="256 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="1170$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 16 Pro Max 512GB.jpg"
-                            alt="IPhone 16">
+                        <img src="./img/IPhone 16 Pro Max 512GB.jpg" alt="IPhone 16">
                         <h3>IPhone 16 Pro Max</h3>
-                        <button class="btn-item" data-title="IPhone 16"
-                            data-img="./img/IPhone 16 Pro Max 512GB.jpg"
-                            data-capacidad="512 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="1380$">
+                        <button class="btn-item" data-title="IPhone 16 Pro Max"
+                            data-img="./img/IPhone 16 Pro Max 512GB.jpg" data-capacidad="512 GB" data-ram="8 GB"
+                            data-pantalla="9''" data-precio="1380$">
                             Ver información
                         </button>
                     </div>
 
                     <div class="item" data-category="IPhone">
-                        <img src="./img/IPhone 16 128GB.jpg"
-                            alt="IPhone 11">
+                        <img src="./img/IPhone 16 128GB.jpg" alt="IPhone 11">
                         <h3>IPhone 16</h3>
-                        <button class="btn-item" data-title="IPhone 11"
-                            data-img="./img/IPhone 16 128GB.jpg"
-                            data-capacidad="128 GB" 
-                            data-ram="8 GB" 
-                            data-pantalla="9''" 
-                            data-precio="799$">
+                        <button class="btn-item" data-title="IPhone 16" data-img="./img/IPhone 16 128GB.jpg"
+                            data-capacidad="128 GB" data-ram="8 GB" data-pantalla="9''" data-precio="799$">
                             Ver información
                         </button>
                     </div>
@@ -550,12 +454,14 @@
 
             <div class="footer-section redes-sociales">
                 <h4>Síguenos</h4>
-                <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok"
-                    style="margin-right: 10px; color: #000;"><i class="fab fa-tiktok fa-lg"></i></a>
-                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"
-                    style="margin-right: 10px; color: #000;"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" style="color: #000;"><i
-                        class="fab fa-facebook fa-lg"></i></a>
+                <div class="link-redes">
+                    <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok"
+                        style="margin-right: 10px; color: #000;"><i class="fab fa-tiktok fa-lg"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"
+                        style="margin-right: 10px; color: #000;"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" style="color: #000;"><i
+                            class="fab fa-facebook fa-lg"></i></a>
+                </div>
             </div>
         </div>
 

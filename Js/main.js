@@ -139,6 +139,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Código para el botón de menú hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
 
-
-
+    // Cierra el menú hamburguesa al hacer clic en un enlace
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+        });
+    });
+});
