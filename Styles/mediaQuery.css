@@ -10,12 +10,16 @@
     }
 
     .logo a h2{ 
-        font-size: 16px;
-        color: white;
+        display: none;
+    }
+
+    .logo a img {
+        width: 120px;
+        height: auto;
     }
 
     p {
-        font-size: 8px;
+        font-size: 15px;
     }
 
     .main-nav .nav-links {

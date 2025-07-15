@@ -123,7 +123,7 @@ main{
     border-radius: 24px;
     text-decoration: none;
     font-weight: 500;
-    margin: 0 8px;
+    margin-top:15px ;
     transition: background 0.2s;
     display: inline-block;
 }
@@ -547,11 +547,6 @@ footer > div:last-child {
     display: flex;
     justify-content: center;
     align-items: center; 
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.footer-section.redes-sociales a:hover i {
-    transform: scale(1.15);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 /* Responsive footer */
