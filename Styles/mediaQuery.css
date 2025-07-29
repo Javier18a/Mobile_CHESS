@@ -100,12 +100,19 @@
 
     /*Tienda*/
 
+    .store-container{
+        display:flex;
+        flex-direction:column;
+    }
+
     .items-store {
         gap: 10px;
     }
 
     .item {
-        max-width: 150px;
+        max-width: 130px;
+        min-width: 110px;
+        flex: 1 1 auto;
     }
 
     .item img {

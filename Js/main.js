@@ -77,6 +77,7 @@ searchInput.addEventListener('input', function() {
     }
 });
 
+
 // Al hacer clic en una sugerencia, poner el texto en el input
 suggestions.addEventListener('click', function(e) {
     if (e.target.tagName === 'DIV') {
@@ -99,31 +100,51 @@ document.addEventListener('click', function(e) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Modal de información de producto
-    const modal = document.getElementById('product-modal');
-    const modalImg = document.getElementById('modal-img');
-    const modalTitle = document.getElementById('modal-title');
-    const modalCapacidad = document.getElementById('modal-capacidad');
-    const modalRam = document.getElementById('modal-ram');
-    const modalPantalla = document.getElementById('modal-pantalla');
-    const modalPrecio = document.getElementById('modal-precio');
-    const closeModal = document.querySelector('.close-modal');
+function activarModales() {
+  const modal = document.getElementById('product-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalCapacidad = document.getElementById('modal-capacidad');
+  const modalRam = document.getElementById('modal-ram');
+  const modalPantalla = document.getElementById('modal-pantalla');
+  const modalPrecio = document.getElementById('modal-precio');
+  const closeModal = document.querySelector('.close-modal');
 
-    // Mostrar información del producto en el modal
-    document.querySelectorAll('.btn-item').forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Obtener los datos del producto desde los atributos data-*
-            document.getElementById('modal-title').textContent = this.getAttribute('data-title');
-            document.getElementById('modal-img').src = this.getAttribute('data-img');
-            document.getElementById('modal-capacidad').textContent = this.getAttribute('data-capacidad');
-            document.getElementById('modal-ram').textContent = this.getAttribute('data-ram');
-            document.getElementById('modal-pantalla').textContent = this.getAttribute('data-pantalla');
-            document.getElementById('modal-precio').textContent = this.getAttribute('data-precio');
-
-            // Mostrar el modal
-            document.getElementById('product-modal').style.display = 'flex';
-        });
+  document.querySelectorAll('.btn-item').forEach(btn => {
+    btn.addEventListener('click', function() {
+      modalTitle.textContent = this.getAttribute('data-title');
+      modalImg.src = this.getAttribute('data-img');
+      modalCapacidad.textContent = this.getAttribute('data-capacidad');
+      modalRam.textContent = this.getAttribute('data-ram');
+      modalPantalla.textContent = this.getAttribute('data-pantalla');
+      modalPrecio.textContent = this.getAttribute('data-precio');
+      modal.style.display = 'flex';
     });
+  });
+
+  closeModal.addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
+}
+
+function cargarComponente(id, ruta, callback) {
+  fetch(ruta)
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById(id).innerHTML = html;
+      if (callback) callback(); // Ejecutar función luego de cargar
+    });
+}
+// Cargar productos y luego activar los modales
+cargarComponente("items-iphones", "includes/IPhones.html", activarModales);
+cargarComponente("items-samsung", "includes/Samsung.html", activarModales);
+cargarComponente("items-accesorios", "includes/Accesorios.html", activarModales);
+cargarComponente("items-xiaomi", "includes/Xiaomi.html", activarModales);
+cargarComponente("items-honor", "includes/Honor.html", activarModales);
+cargarComponente("items-tv", "includes/TV.html", activarModales);
+cargarComponente("items-infinix", "includes/Infinix.html", activarModales);
+cargarComponente("items-tecno", "includes/Tecno.html", activarModales);
+
 
     // Cerrar el modal al hacer clic en la X o fuera del contenido
     document.querySelectorAll('.close-modal').forEach(btn => {
