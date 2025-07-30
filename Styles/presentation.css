@@ -1,146 +1,103 @@
-/* From Uiverse.io by Rodrypaladin */ 
+.shadow__btn {
+  margin-top: 20px;  
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.shadow__btn {
+  background: rgb(0,140,255);
+  box-shadow: 0 0 25px rgb(0,140,255);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+}
+
+/* From Uiverse.io by roajuan93 */ 
 .card {
-  width: 210px;
-  height: 400px;
-  background: black;
-  border-radius: 35px;
-  border: 2px solid rgb(40, 40, 40);
-  padding: 7px;
-  position: relative;
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
-}
-
-.card-int {
-  background-image: linear-gradient(to right bottom, #ff0000, #ff0045, #ff0078, #ea00aa, #b81cd7, #8a3ad6, #5746cf, #004ac2, #003d94, #002e66, #001d3a, #020812);
-  background-size: 200% 200%;
-  background-position: 0% 0%;
-  height: 100%;
-  border-radius: 25px;
-  transition: all 0.6s ease-out;
-  overflow: hidden;
-}
-
-.card:hover .card-int {
-  background-position: 100% 100%;
-}
-
-.top {
-  position: absolute;
-  top: 0px;
-  right: 50%;
-  transform: translate(50%, 0%);
-  width: 35%;
-  height: 18px;
-  background-color: black;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.speaker {
-  position: absolute;
-  top: 2px;
-  right: 50%;
-  transform: translate(50%, 0%);
-  width: 40%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: rgb(20, 20, 20);
-}
-
-.camera {
-  position: absolute;
-  top: 6px;
-  right: 84%;
-  transform: translate(50%, 0%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.048);
-}
-
-.int {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  background-color: rgba(0, 0, 255, 0.212);
-}
-
-.btn1, .btn2, .btn3, .btn4 {
-  position: absolute;
-  width: 2px;
-}
-
-.btn1, .btn2, .btn3 {
-  height: 45px;
-  top: 30%;
-  right: -4px;
-  background-image: linear-gradient(to right, #111111, #222222, #333333, #464646, #595959);
-}
-
-.btn2, .btn3 {
-  transform: scale(-1);
-  left: -4px;
-}
-
-.btn2, .btn3 {
-  transform: scale(-1);
-  height: 30px;
-}
-
-.btn2 {
-  top: 26%
-}
-
-.btn3 {
-  top: 36%
-}
-
-.hello {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
   display: flex;
-  flex-flow: column;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  line-height: 35px;
-  height: 100%;
-  transition: 0.5s ease-in-out;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
 
-.hidden {
-  display: block;
-  opacity: 0;
-  transition: all 0.3s ease-in;
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 5px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* Tiktok*/
+.containerTwo:hover {
+  background-color: #25f4ee;
+  transition-duration: 0.3s;
+}
+/* Facebook*/
+.containerThree:hover {
+  background-color: #1877f2;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: green;
+  transition-duration: 0.3s;
 }
 
-.card:hover .hidden {
-  opacity: 1;
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
 }
 
-.card:hover .hello {
-  transform: translateY(-20px);
+.socialSvg {
+  width: 19px;
+}
+.largeIcon {
+  width: 27px; /* Ancho específico solo para el icono de TikTok */
+}
+.socialSvg path {
+  fill: rgb(255, 255, 255);
 }
 
-.presentation-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 220px;
-    transition: all 0.5s;
-}
-#presentation-text {
-    font-size: 1.3em;
-    font-weight: 600;
-    margin-top: 8px;
-    text-align: center;
-    transition: opacity 0.5s;
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
 }
 
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
 
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    color: black;
+    color: black; 
+    
 }
 
 header {
@@ -97,11 +98,12 @@ header nav>ul>li>a:hover {
 }
 
 #inicio{
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    background: #f0f0f0;
 }
 
 #inicio .text_main {
@@ -109,16 +111,25 @@ header nav>ul>li>a:hover {
     text-align: center;
 }
 
-#inicio .btn_access_main a {
-    background: #0053A1;
-    color: #fff;
-    padding: 10px 28px;
-    border-radius: 24px;
-    text-decoration: none;
-    font-weight: 500;
-    margin-top:15px ;
-    transition: background 0.2s;
-    display: inline-block;
+@font-face {
+    font-family: 'Signature';
+    src: url('../australian_signature/Australian Signature.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#inicio .text_main h1{ 
+    font-size: 90px;  
+    font-family:'Signature', Arial, sans-serif; 
+    font-weight: normal;
+    font-style: normal; 
+}
+
+#inicio .text_main p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .img_main{
@@ -452,80 +463,10 @@ header nav>ul>li>a:hover {
 footer {
     background: rgba(0, 83, 161, 0.85);
     color: #fff;
-    padding: 32px 0 16px 0;
+    padding: 20px;
     text-align: center;
     margin-top: 40px;
     box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto 12px auto;
-}
-
-.footer-section {
-    min-width: 180px;
-    margin-bottom: 12px;
-}
-
-.footer-section h4 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #fff;
-    letter-spacing: 0.5px;
-}
-
-.footer-section a {
-    color: #fff;
-    margin-right: 14px;
-    font-size: 14px;
-    transition: color 0.2s;
-    text-decoration: none;
-}
-
-.footer-contacto p {
-    margin: 4px 0;
-    font-size: 1rem;
-    color: #e0e0e0;
-}
-
-footer .copyright,
-footer > div:last-child {
-    text-align: center;
-    font-size: 0.95em;
-    color: #e0e0e0;
-    margin-top: 16px;
-}
-
-.enlaces-rapidos{
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-}
-
-.enlaces-rapidos li {
-    margin: 4px 0;
-    font-size: 14px;
-}
-
-.footer-section.redes-sociales {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.link-redes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
 }
 
 .footer-section.redes-sociales a[aria-label="TikTok"] i {

@@ -23,6 +23,7 @@
     }
 
     .main-nav .nav-links {
+        display: none;
         flex-direction: column;
         background: #396CAA;
         position: fixed;
@@ -39,7 +40,8 @@
     }
 
     .main-nav .nav-links.active {
-        height: 70vh;
+        display: flex;
+        height: 60vh;
         visibility: visible;
         opacity: 1;
         padding: 40px 20px;
