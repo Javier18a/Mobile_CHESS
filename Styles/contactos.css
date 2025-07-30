@@ -1,12 +1,13 @@
 section{ 
-    height: 100vh;
+    height: 91.6vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .target_contact{
     width: 600px;
+    font-size: 1.2rem;
 }
 
 .target_contact h2{
@@ -81,11 +82,14 @@ section{
 
 @media (max-width: 767px){
     section{
+        height: auto;
+        padding-top: 110px;  
         flex-direction: column;
     }
 
     .target_contact{
         width: 90%;
+        font-size: 1rem;
     }
 
     .target_contact h2{
@@ -94,7 +98,9 @@ section{
 
     .redes{
         width: 100%;
-        padding: 10px;
+        margin-top: 20px;
+        padding: 50px 0 60px 0;
+        background: #f9f9f9;
     }
 
     .redes h1{
@@ -105,7 +111,7 @@ section{
     .redes ul{
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 16px;
     }
 }
 

@@ -86,6 +86,10 @@
         display: block;
     }
 
+    #inicio{
+        height: 95vh;
+    }
+
     /*Valores*/
 
     .values {
