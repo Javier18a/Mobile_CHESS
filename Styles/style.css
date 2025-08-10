@@ -225,7 +225,6 @@ header nav>ul>li>a:hover {
     line-height: 1.6;
 }
 
-
 /*Tienda*/
 
 #Store{
@@ -234,21 +233,19 @@ header nav>ul>li>a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    padding: 40px 20px;
 }
-
 
 .store-container{
     display: flex;
-    justify-content: center;
-    padding: 20px;
-}
+}   
 
 .productos-galery{
+    width: 100% ;
     display: flex;
     flex-direction: column;
-    align-items: center;  
-    justify-content: center;  
+    justify-content: center;
+    align-items: center;   
 }
 
 .items-store{
@@ -257,7 +254,6 @@ header nav>ul>li>a:hover {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px;
 }
 
@@ -285,7 +281,8 @@ header nav>ul>li>a:hover {
     color: black;
 }
 
-.item .btn-item {
+.item .btn-item,
+.item .btn-item-tv {
     margin-top: 10px;
     background: #0053A1;
     color: #fff;
@@ -301,7 +298,8 @@ header nav>ul>li>a:hover {
 
 
 /* Modal de información de producto */
-.modal-overlay {
+.modal-overlay,
+.modal-overlay-tv {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
@@ -311,7 +309,8 @@ header nav>ul>li>a:hover {
     justify-content: center;
     z-index: 9999;
 }
-.modal-content {
+.modal-content,
+.modal-content-tv {
     background: #fff;
     color: #222;
     border-radius: 16px;
@@ -322,7 +321,8 @@ header nav>ul>li>a:hover {
     text-align: center;
     position: relative;
 }
-.close-modal {
+.close-modal,
+.close-modal-tv {
     position: absolute;
     top: 12px;
     right: 18px;
@@ -332,11 +332,13 @@ header nav>ul>li>a:hover {
     font-weight: bold;
 }
 
-#modal-price{
+#modal-price,
+#modal-price-tv {
     display: flex;
 }
 
-.modal-content {
+.modal-content,
+.modal-content-tv {
     background: #fff;
     color: #222;
     border-radius: 16px;
@@ -347,15 +349,18 @@ header nav>ul>li>a:hover {
     text-align: left;
     position: relative;
 }
-.modal-flex {
+.modal-flex,
+.modal-flex-tv {
     display: flex;
     gap: 24px;
     align-items: flex-start;
 }
-.modal-info {
+.modal-info,
+.modal-flex-tv {
     flex: 1;
 }
-.close-modal {
+.close-modal,
+.modal-flex-tv {
     position: absolute;
     top: 12px;
     right: 18px;
@@ -378,6 +383,7 @@ header nav>ul>li>a:hover {
 
 
 .store-quick {
+    background-color: white;
     width: 200px;
     border: none;
     position: sticky;

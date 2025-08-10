@@ -21,17 +21,31 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 
 // Filtro por categoría
 document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         const category = this.getAttribute('data-category');
-        document.querySelectorAll('.items-store .item').forEach(item => {
-            if (category === 'all' || item.getAttribute('data-category') === category) {
-                item.style.display = '';
-            } else {
-                item.style.display = 'none';
-            }
+
+        document.querySelectorAll('.items-store').forEach(container => {
+            let items = container.querySelectorAll('.item');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = '';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            container.style.display = visibleCount > 0 ? 'flex' : 'none';
         });
+
+        // Vuelve a activar los modales en los productos visibles
+        activarModales();
     });
 });
+
+
 
 // Filtro por input (buscador)
 document.getElementById('search-input').addEventListener('input', function() {
@@ -72,7 +86,6 @@ searchInput.addEventListener('input', function() {
         suggestions.innerHTML = matches.map(name => `<div>${name}</div>`).join('');
         suggestions.classList.add('active');
     } else {
-        suggestions.innerHTML = '<div>No hay coincidencias</div>';
         suggestions.classList.add('active');
     }
 });
@@ -138,7 +151,6 @@ function cargarComponente(id, ruta, callback) {
 // Cargar productos y luego activar los modales
 cargarComponente("items-iphones", "includes/IPhones.html", activarModales);
 cargarComponente("items-samsung", "includes/Samsung.html", activarModales);
-cargarComponente("items-accesorios", "includes/Accesorios.html", activarModales);
 cargarComponente("items-xiaomi", "includes/Xiaomi.html", activarModales);
 cargarComponente("items-honor", "includes/Honor.html", activarModales);
 cargarComponente("items-tv", "includes/TV.html", activarModales);
@@ -175,3 +187,73 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+function activarModales() {
+  // Modal general productos
+  const productosGalery = document.querySelector('.productos-galery');
+  const modal = document.getElementById('product-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalCapacidad = document.getElementById('modal-capacidad');
+  const modalRam = document.getElementById('modal-ram');
+  const modalPantalla = document.getElementById('modal-pantalla');
+  const modalPrecio = document.getElementById('modal-precio');
+
+  // Modal TV
+  const tvModal = document.getElementById('tv-modal');
+  const tvModalImg = document.getElementById('tv-modal-img');
+  const tvModalTitle = document.getElementById('tv-modal-title');
+  const tvModalSO = document.getElementById('tv-modal-so');
+  const tvModalResolucion = document.getElementById('tv-modal-resolucion');
+  const tvModalConectividad = document.getElementById('tv-modal-conectividad');
+  const tvModalFunciones = document.getElementById('tv-modal-funciones');
+  const tvModalPantalla = document.getElementById('tv-modal-pantalla');
+  const tvModalPrecio = document.getElementById('modal-precio');
+
+  const productosContenedor = document.querySelector('.productos-galery');
+
+  productosContenedor.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn-item')) {
+      // Modal producto general
+      const btn = e.target;
+      modalTitle.textContent = btn.dataset.title;
+      modalImg.src = btn.dataset.img;
+      modalCapacidad.textContent = btn.dataset.capacidad;
+      modalRam.textContent = btn.dataset.ram;
+      modalPantalla.textContent = btn.dataset.pantalla;
+      modalPrecio.textContent = btn.dataset.precio;
+      modal.style.display = 'flex';
+    }
+
+    if (e.target.classList.contains('btn-item-tv')) {
+      // Modal TV
+      const btn = e.target;
+      tvModalTitle.textContent = btn.dataset.title;
+      tvModalImg.src = btn.dataset.img;
+      tvModalSO.textContent = btn.dataset.so;
+      tvModalResolucion.textContent = btn.dataset.resolucion;
+      tvModalConectividad.textContent = btn.dataset.conectividad;
+      tvModalFunciones.textContent = btn.dataset.funciones;
+      tvModalPrecio.textContent = btn.dataset.precio; 
+      tvModalPantalla.textContent = btn.dataset.pantalla;
+      tvModal.style.display = 'flex';
+    }
+  });
+
+  // Cerrar modal general
+  modal.querySelector('.close-modal').addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+
+  // Cerrar modal TV
+  tvModal.querySelector('.close-modal-tv').addEventListener('click', () => {
+    tvModal.style.display = 'none';
+  });
+  tvModal.addEventListener('click', (e) => {
+    if (e.target === tvModal) tvModal.style.display = 'none';
+  });
+}
